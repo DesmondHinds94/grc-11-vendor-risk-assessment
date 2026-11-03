@@ -1,0 +1,32 @@
+CAIQ_ID,Topic,Vendor_Answer,Vendor_Comment,Requirement,Validated_Against,Assessor_Result,Assessor_Note
+A&A-02.1,Independent audits performed at least annually,Yes,SOC 2 Type II annually,VR-01,SOC 2 report,Meets,"Period ends 2026-06-30 (4 months old). One exception noted in CC6.2 testing (2 of 25 terminations late)"
+A&A-02.2,Audit results available to customers,Yes,Under NDA,VR-13,SOC 2 report,Meets,
+A&A-03.1,Risk-based audit plan,Yes,,VR-01,Not validated,Unverified,Self-attested only
+BCR-03.1,BCP/DR strategy documented,Yes,,VR-12,SOC 2 A1.2,Meets,Availability criteria in scope of the SOC 2
+BCR-04.1,Continuity plans exercised annually,Yes,Annual DR test,VR-12,SOC 2 A1.3,Meets,Test 2026-03; RTO 8h achieved
+BCR-08.1,Backups performed and tested,Yes,,VR-12,SOC 2 A1.2,Meets,
+CEK-03.1,Data encrypted at rest,Yes,AES-256 via AWS KMS,VR-03,SOC 2 CC6.1,Meets,
+CEK-03.2,Data encrypted in transit,Yes,TLS 1.2+,VR-03,Tested,Meets,"TLS scan of API endpoint: TLS 1.2/1.3 only"
+DSP-04.1,Data classification scheme,Yes,,VR-07,Not validated,Unverified,
+DSP-07.1,Data protection by design and default,Yes,,VR-14,Contract,Partial,"Privacy policy allows use of 'de-identified data for product improvement'; conflicts with VR-14"
+DSP-16.1,Data retention and deletion per policy,Yes,"Verification records retained 7 years",VR-07,Vendor policy,Gap,"7-year retention of full SSN + income vs 30-day requirement. Vendor cites FCRA record-keeping; counsel review shows retention of the result is required, not of the full SSN"
+DSP-17.1,Sensitive data protection in storage,Yes,,VR-03,SOC 2 CC6.1,Meets,
+DSP-19.1,Data location disclosed,Yes,"AWS us-east-1, us-west-2",VR-02,SOC 2 system description,Meets,US only. Commercial regions; no GovCloud
+HRS-01.1,Background screening,Yes,At hire,VR-10,SOC 2 CC1.4,Meets,
+IAM-05.1,Least privilege enforced,Yes,,VR-05,SOC 2 CC6.3,Meets,
+IAM-08.1,User access reviews,Yes,Quarterly,VR-05,SOC 2 CC6.2,Partial,SOC 2 exception: 2 of 25 terminations not removed within SLA
+IAM-09.1,Privileged access segregated,Yes,,VR-05,SOC 2 CC6.1,Meets,
+IAM-14.1,Strong authentication (MFA) for workforce,Yes,"MFA required; SMS for support staff, hardware keys for engineers",VR-04,Interview 2026-10-14,Partial,"Support staff (12) can view verification results incl. last-4 SSN using SMS OTP; not phishing-resistant"
+IVS-03.1,Network security and segmentation,Yes,,VR-03,SOC 2 CC6.6,Meets,
+LOG-05.1,Audit logs monitored,Yes,24x7 SOC (outsourced),VR-08,SOC 2 CC7.2,Meets,
+LOG-02.1,Audit log retention,Yes,1 year,VR-08,SOC 2 CC7.2,Meets,
+SEF-04.1,IR plan tested,Yes,Annual tabletop,VR-06,Not validated,Unverified,Requested AAR summary; not yet received
+SEF-07.1,Breach notification to customers,Yes,"Within 72 hours of confirmation",VR-06,MSA draft,Gap,"72h from confirmation vs 24h from discovery required"
+STA-07.1,Supply chain (subprocessor) inventory,Yes,"AWS, SOC provider, SMS provider",VR-11,SOC 2 system description,Partial,"SOC 2 carves out AWS (inclusive method not used); vendor's review of AWS SOC report not evidenced"
+STA-09.1,Contract terms include security requirements,Yes,,VR-13,MSA draft,Partial,"No right-to-audit clause; evidence-on-request only"
+STA-14.1,Supply chain risk assessed periodically,No,Planned 2027,VR-11,—,Gap,
+TVM-07.1,Vulnerability identification,Yes,Weekly scanning,VR-09,SOC 2 CC7.1,Meets,
+TVM-08.1,Remediation prioritized by risk/SLA,Yes,Critical 30d,VR-09,Vendor policy,Partial,Critical SLA 30d vs 15d requirement
+TVM-10.1,Penetration testing annually,Yes,,VR-09,Pen-test exec summary 2026-04,Meets,No criticals open per summary
+UEM-08.1,Endpoint encryption,Yes,,VR-03,SOC 2 CC6.1,Meets,
+SUPP-01,(CivicStack supplemental) FedRAMP or GovRAMP authorization,No,"Not pursuing before 2028",VR-01,—,Gap,"Meets VR-01 via SOC 2, but no GovRAMP authorization; CMHA prefers authorized vendors for Moderate systems"
